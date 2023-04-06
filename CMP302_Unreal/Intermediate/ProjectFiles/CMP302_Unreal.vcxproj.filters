@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\CMP302_Unreal.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CMP302_Unreal.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CMP302_UnrealEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\CMP302_Unreal">
+      <UniqueIdentifier>{BAD26E8C-74A0-39BC-9470-485567AEE2A0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CMP302_Unreal\CMP302_Unreal.Build.cs">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\CMP302_Unreal.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\CMP302_Unreal.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\CMP302_UnrealCharacter.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\CMP302_UnrealCharacter.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\CMP302_UnrealGameMode.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\CMP302_UnrealGameMode.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\CMP302_UnrealProjectile.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\CMP302_UnrealProjectile.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\TP_PickUpComponent.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\TP_PickUpComponent.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\TP_WeaponComponent.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\TP_WeaponComponent.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

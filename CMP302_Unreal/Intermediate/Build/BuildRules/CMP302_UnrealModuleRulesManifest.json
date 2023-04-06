@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Programming\\CMP302-Project\\CMP302_Unreal\\Source\\CMP302_Unreal\\CMP302_Unreal.Build.cs",
+		"D:\\Programming\\CMP302-Project\\CMP302_Unreal\\Source\\CMP302_Unreal.Target.cs",
+		"D:\\Programming\\CMP302-Project\\CMP302_Unreal\\Source\\CMP302_UnrealEditor.Target.cs"
+	],
+	"EngineVersion": "5.0.3"
+}

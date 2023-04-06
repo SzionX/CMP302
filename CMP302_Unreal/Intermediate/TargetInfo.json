@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "CMP302_Unreal",
+			"Path": "D:\\Programming\\CMP302-Project\\CMP302_Unreal\\Source\\CMP302_Unreal.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "CMP302_UnrealEditor",
+			"Path": "D:\\Programming\\CMP302-Project\\CMP302_Unreal\\Source\\CMP302_UnrealEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
