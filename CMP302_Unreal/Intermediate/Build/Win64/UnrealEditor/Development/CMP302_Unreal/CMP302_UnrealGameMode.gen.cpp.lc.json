@@ -1,0 +1,19 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\cmp302_unrealgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\cmp302_unrealeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\development\\cmp302_unreal\\definitions.cmp302_unreal.h",
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\source\\cmp302_unreal\\cmp302_unrealgamemode.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\cmp302_unrealgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

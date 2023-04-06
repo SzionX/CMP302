@@ -23,13 +23,13 @@ void EmptyLinkFunctionForGeneratedCodeCMP302_Unreal_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xF290EFF2,
-				0x4EA5F3D4,
+				0xA14EDDEC,
+				0x11CC68CC,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_CMP302_Unreal.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_CMP302_Unreal.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_CMP302_Unreal(Z_Construct_UPackage__Script_CMP302_Unreal, TEXT("/Script/CMP302_Unreal"), Z_Registration_Info_UPackage__Script_CMP302_Unreal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF290EFF2, 0x4EA5F3D4));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_CMP302_Unreal(Z_Construct_UPackage__Script_CMP302_Unreal, TEXT("/Script/CMP302_Unreal"), Z_Registration_Info_UPackage__Script_CMP302_Unreal, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xA14EDDEC, 0x11CC68CC));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

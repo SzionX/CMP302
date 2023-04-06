@@ -7,7 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
-
+#include "GameFramework/CharacterMovementComponent.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ACMP302_UnrealCharacter
@@ -42,6 +42,20 @@ void ACMP302_UnrealCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
+	//Set Default Values
+	GetCharacterMovement()->GravityScale = 1.9f;	//Gravity Scale
+	GetCharacterMovement()->AirControl = 0.5f;		//Air Control
+}
+
+void ACMP302_UnrealCharacter::Tick(float DeltaTime)
+{
+	//If spacebar is held
+	if (GetCharacterMovement()->MovementMode == MOVE_Falling && ) {
+		isDrifting = true;
+	}
+	else {
+		isDrifting = false;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -55,12 +69,6 @@ void ACMP302_UnrealCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	// Bind fire event
-	PlayerInputComponent->BindAction("PrimaryAction", IE_Pressed, this, &ACMP302_UnrealCharacter::OnPrimaryAction);
-
-	// Enable touchscreen input
-	EnableTouchscreenMovement(PlayerInputComponent);
-
 	// Bind movement events
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &ACMP302_UnrealCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &ACMP302_UnrealCharacter::MoveRight);
@@ -72,39 +80,15 @@ void ACMP302_UnrealCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAxis("Look Up / Down Mouse", this, &APawn::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis("Turn Right / Left Gamepad", this, &ACMP302_UnrealCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("Look Up / Down Gamepad", this, &ACMP302_UnrealCharacter::LookUpAtRate);
+
+	//Bind Jett Abilities
+	PlayerInputComponent->BindAction("Drift", IE_Pressed, this, &ACMP302_UnrealCharacter::Drift);
+	PlayerInputComponent->BindAction("Tailwind", IE_Pressed, this, &ACMP302_UnrealCharacter::Tailwind);
+	PlayerInputComponent->BindAction("Updraft", IE_Pressed, this, &ACMP302_UnrealCharacter::Updraft);
+	PlayerInputComponent->BindAction("Cloudburst", IE_Pressed, this, &ACMP302_UnrealCharacter::Cloudburst);
 }
 
-void ACMP302_UnrealCharacter::OnPrimaryAction()
-{
-	// Trigger the OnItemUsed Event
-	OnUseItem.Broadcast();
-}
-
-void ACMP302_UnrealCharacter::BeginTouch(const ETouchIndex::Type FingerIndex, const FVector Location)
-{
-	if (TouchItem.bIsPressed == true)
-	{
-		return;
-	}
-	if ((FingerIndex == TouchItem.FingerIndex) && (TouchItem.bMoved == false))
-	{
-		OnPrimaryAction();
-	}
-	TouchItem.bIsPressed = true;
-	TouchItem.FingerIndex = FingerIndex;
-	TouchItem.Location = Location;
-	TouchItem.bMoved = false;
-}
-
-void ACMP302_UnrealCharacter::EndTouch(const ETouchIndex::Type FingerIndex, const FVector Location)
-{
-	if (TouchItem.bIsPressed == false)
-	{
-		return;
-	}
-	TouchItem.bIsPressed = false;
-}
-
+//Basic Movement
 void ACMP302_UnrealCharacter::MoveForward(float Value)
 {
 	if (Value != 0.0f)
@@ -123,6 +107,34 @@ void ACMP302_UnrealCharacter::MoveRight(float Value)
 	}
 }
 
+//Jett Abilities
+//Slow Fall
+void ACMP302_UnrealCharacter::Drift()
+{
+	// Change gravity scale while spacebar is held down
+	if (isDrifting) {
+		GetCharacterMovement()->GravityScale = 0.1f;
+	}
+	else {
+		GetCharacterMovement()->GravityScale = 1.9f;
+	}
+}
+
+//Dash in any direction
+void ACMP302_UnrealCharacter::Tailwind()
+{
+}
+
+//Adds vertical velocity
+void ACMP302_UnrealCharacter::Updraft()
+{
+}
+
+//Deploys controllable smoke
+void ACMP302_UnrealCharacter::Cloudburst()
+{
+}
+
 void ACMP302_UnrealCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
@@ -133,17 +145,4 @@ void ACMP302_UnrealCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * TurnRateGamepad * GetWorld()->GetDeltaSeconds());
-}
-
-bool ACMP302_UnrealCharacter::EnableTouchscreenMovement(class UInputComponent* PlayerInputComponent)
-{
-	if (FPlatformMisc::SupportsTouchInput() || GetDefault<UInputSettings>()->bUseMouseForTouch)
-	{
-		PlayerInputComponent->BindTouch(EInputEvent::IE_Pressed, this, &ACMP302_UnrealCharacter::BeginTouch);
-		PlayerInputComponent->BindTouch(EInputEvent::IE_Released, this, &ACMP302_UnrealCharacter::EndTouch);
-
-		return true;
-	}
-	
-	return false;
 }

@@ -59,6 +59,12 @@
     <ClInclude Include="..\..\Source\CMP302_Unreal\CMP302_UnrealProjectile.h">
       <Filter>Source\CMP302_Unreal</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\CMP302_Unreal\JettMechanics.cpp">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CMP302_Unreal\JettMechanics.h">
+      <Filter>Source\CMP302_Unreal</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\CMP302_Unreal\TP_PickUpComponent.cpp">
       <Filter>Source\CMP302_Unreal</Filter>
     </ClCompile>

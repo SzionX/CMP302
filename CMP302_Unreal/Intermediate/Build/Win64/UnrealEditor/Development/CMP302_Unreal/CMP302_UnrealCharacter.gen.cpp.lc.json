@@ -1,0 +1,21 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\cmp302_unrealcharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\cmp302_unrealeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\development\\cmp302_unreal\\definitions.cmp302_unreal.h",
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\source\\cmp302_unreal\\cmp302_unrealcharacter.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementreplication.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\cmp302_unrealcharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
