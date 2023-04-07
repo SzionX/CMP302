@@ -49,8 +49,10 @@ void ACMP302_UnrealCharacter::BeginPlay()
 
 void ACMP302_UnrealCharacter::Tick(float DeltaTime)
 {
+	UE_LOG(LogTemp, Warning, TEXT("Tick is running"));
 	//If spacebar is held
-	if (GetCharacterMovement()->MovementMode == MOVE_Falling && ) {
+	if (GetVelocity().Z < 0) {
+		UE_LOG(LogTemp, Warning, TEXT("Velocity is downwards!"));
 		isDrifting = true;
 	}
 	else {

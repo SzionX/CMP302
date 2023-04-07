@@ -13,7 +13,17 @@
             "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
             "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
-            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\jettmechanics.generated.h"
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\jettmechanics.generated.h",
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\source\\cmp302_unreal\\cmp302_unrealprojectile.h",
+            "d:\\programming\\cmp302-project\\cmp302_unreal\\intermediate\\build\\win64\\unrealeditor\\inc\\cmp302_unreal\\cmp302_unrealprojectile.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\cameracomponent.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\capsulecomponent.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\shapecomponent.generated.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\capsulecomponent.generated.h",
+            "d:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\inputsettings.h",
+            "d:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\inputsettings.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
