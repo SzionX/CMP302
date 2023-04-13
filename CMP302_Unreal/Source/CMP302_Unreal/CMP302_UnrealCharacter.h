@@ -41,43 +41,60 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-	//Basic Movement Functions
+
+	//Movement functions
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void MoveForward(float Val);
+
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void MoveRight(float Val);
 
-	//Jett Abilities
+	//Abilities
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void Drift();
+
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void Tailwind();
+
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void Updraft();
+
+	UFUNCTION(BlueprintCallable, Category = "Abilities")
 	void Cloudburst();
 
+	//Mouse Movement functions
 	void TurnAtRate(float Rate);
+
 	void LookUpAtRate(float Rate);
 	
 private:
 
 	//Variables
 	bool isDrifting = false;
+	FVector currentVelocity;
+	FVector upVelocity;
+	FVector newVelocity;
+	FVector dashDirection;
+
+	float launchSpeed, dashSpeed;
 
 protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 	// End of APawn interface
 
-
 public:
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
-		float TurnRateGamepad;
+	float TurnRateGamepad;
 
 	/** Delegate to whom anyone can subscribe to receive this event */
 	UPROPERTY(BlueprintAssignable, Category = "Interaction")
-		FOnUseItem OnUseItem;
+	FOnUseItem OnUseItem;
 
 	/** Returns Mesh1P subobject **/
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
-
 };
 

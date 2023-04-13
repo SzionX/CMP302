@@ -21,8 +21,26 @@ static inline void FOnUseItem_DelegateWrapper(const FMulticastScriptDelegate& On
 
 
 #define FID_CMP302_Unreal_Source_CMP302_Unreal_CMP302_UnrealCharacter_h_23_SPARSE_DATA
-#define FID_CMP302_Unreal_Source_CMP302_Unreal_CMP302_UnrealCharacter_h_23_RPC_WRAPPERS
-#define FID_CMP302_Unreal_Source_CMP302_Unreal_CMP302_UnrealCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_CMP302_Unreal_Source_CMP302_Unreal_CMP302_UnrealCharacter_h_23_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execCloudburst); \
+	DECLARE_FUNCTION(execUpdraft); \
+	DECLARE_FUNCTION(execTailwind); \
+	DECLARE_FUNCTION(execDrift); \
+	DECLARE_FUNCTION(execMoveRight); \
+	DECLARE_FUNCTION(execMoveForward);
+
+
+#define FID_CMP302_Unreal_Source_CMP302_Unreal_CMP302_UnrealCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCloudburst); \
+	DECLARE_FUNCTION(execUpdraft); \
+	DECLARE_FUNCTION(execTailwind); \
+	DECLARE_FUNCTION(execDrift); \
+	DECLARE_FUNCTION(execMoveRight); \
+	DECLARE_FUNCTION(execMoveForward);
+
+
 #define FID_CMP302_Unreal_Source_CMP302_Unreal_CMP302_UnrealCharacter_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACMP302_UnrealCharacter(); \

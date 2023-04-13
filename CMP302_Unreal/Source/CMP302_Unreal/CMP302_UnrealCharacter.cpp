@@ -34,7 +34,6 @@ ACMP302_UnrealCharacter::ACMP302_UnrealCharacter()
 	Mesh1P->CastShadow = false;
 	Mesh1P->SetRelativeRotation(FRotator(1.9f, -19.19f, 5.2f));
 	Mesh1P->SetRelativeLocation(FVector(-0.5f, -4.4f, -155.7f));
-
 }
 
 void ACMP302_UnrealCharacter::BeginPlay()
@@ -45,19 +44,18 @@ void ACMP302_UnrealCharacter::BeginPlay()
 	//Set Default Values
 	GetCharacterMovement()->GravityScale = 1.9f;	//Gravity Scale
 	GetCharacterMovement()->AirControl = 0.5f;		//Air Control
+	
+	//Set values for Updraft
+	launchSpeed = 1000;
+	dashSpeed = 100;
+	upVelocity = FVector(0, 0, 1);
 }
 
 void ACMP302_UnrealCharacter::Tick(float DeltaTime)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Tick is running"));
-	//If spacebar is held
-	if (GetVelocity().Z < 0) {
-		UE_LOG(LogTemp, Warning, TEXT("Velocity is downwards!"));
-		isDrifting = true;
-	}
-	else {
-		isDrifting = false;
-	}
+	//Keep character velocity updated
+	currentVelocity = GetCharacterMovement()->Velocity;
+	newVelocity = currentVelocity + upVelocity;
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -110,11 +108,13 @@ void ACMP302_UnrealCharacter::MoveRight(float Value)
 }
 
 //Jett Abilities
+
 //Slow Fall
 void ACMP302_UnrealCharacter::Drift()
 {
-	// Change gravity scale while spacebar is held down
-	if (isDrifting) {
+	//Float downwards if spacebar is held
+	if (GetCharacterMovement()->IsFalling() && GetWorld()->GetFirstPlayerController()->IsInputKeyDown(EKeys::SpaceBar)) {
+
 		GetCharacterMovement()->GravityScale = 0.1f;
 	}
 	else {
@@ -125,11 +125,18 @@ void ACMP302_UnrealCharacter::Drift()
 //Dash in any direction
 void ACMP302_UnrealCharacter::Tailwind()
 {
+	// Apply the launch speed to the dash direction vector
+	dashDirection = currentVelocity * dashSpeed;
+
+	// Apply the dash direction to the character's velocity
+	GetCharacterMovement()->Velocity = dashDirection;
 }
 
 //Adds vertical velocity
 void ACMP302_UnrealCharacter::Updraft()
 {
+	FVector upForce = upVelocity * launchSpeed;
+	GetCharacterMovement()->AddImpulse(upForce, true);
 }
 
 //Deploys controllable smoke
